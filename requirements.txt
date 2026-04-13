@@ -1,0 +1,9 @@
+fastapi
+uvicorn
+line-bot-sdk<3.0.0
+google-api-python-client
+google-auth-httplib2
+google-auth-oauthlib
+pydantic-settings
+python-multipart
+python-dotenv
