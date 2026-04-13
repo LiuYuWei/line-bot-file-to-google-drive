@@ -8,12 +8,16 @@ PORT=8080
 help:
 	@echo "Usage:"
 	@echo "  make install            Install dependencies"
+	@echo "  make get-token          Run the OAuth2 token generation script"
 	@echo "  make run                Run the application locally"
 	@echo "  make build              Build the Docker image"
 	@echo "  make deploy-cloud-run   Deploy the application to Google Cloud Run"
 
 install:
 	pip install -r requirements.txt
+
+get-token:
+	python get_token.py
 
 run:
 	python -m src.main

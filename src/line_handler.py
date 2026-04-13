@@ -55,7 +55,10 @@ def handle_message(event):
         # Send back the link
         line_bot_api.push_message(
             event.source.user_id,
-            TextSendMessage(text=f"檔案已成功上傳至 Google Drive！\n連結：{drive_link}")
+            [
+                TextSendMessage(text="檔案已成功上傳至 Google Drive！\n您可以分享以下連結給其他人使用："),
+                TextSendMessage(text=f"{drive_link}")
+            ]
         )
     except Exception as e:
         print(f"Error during upload: {e}")
